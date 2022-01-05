@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            width: 150px;
+        }
+
+        th,
+        td {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tong {
+            width: 500px;
+            display: flex;
+            margin-top: 20px;
+            margin: 0 auto;
+
+        }
+
+        .right {
+            margin-left: 20px;
+
+        }
+
+        .right .width_1 {
+            width: 200px;
+        }
+
+        .right .width_2 {
+            width: 20px;
+        }
+
+        .hien-thi {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            margin: 20px 20px;
+        }
+
+        .table {
+            width: 700px;
+            margin: 0 auto;
+
+        }
+
+        .text {
+            text-align: center;
+        }
+    </style>
+    <title>Bài Tập 2</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1> Tính Toán Năm Sinh</h1>
+        <div class="tong">
+            <div class="left">
+                <label for="">Mời Bạn Nhập Tên Mình :</label><br><br>
+                <label for="">Nhập vào Tuổi Của Mình :</label><br><br>
+                <label>Mời Bạn Chọn Giới Tính:</label><br><br>
+                <button id="btn_tinh">Tính</button><br><br>
+                <label for="">Kết Quả :</label><br>
+                <label for="">Năm Sinh Của Bạn :</label>
+            </div>
+            <div class="right">
+                <input type="text" id="ten" maxlength="15"><br>
+                <span id="messege_ten"></span><br>
+                <input type="text" id="tuoi" max="200"><br>
+                <span id="messege_tuoi" style="color: red;"></span><br>
+                <input type="radio" name="gioitinh" value="Nam" class="width_2">Nam
+                <input type="radio" name="gioitinh" value="Nữ" class="width_2">Nữ<br><br><br><br>
+                <input id="kq" readonly>
+            </div>
+        </div>
+        <div class="hien-thi">Hiển Thị Thông Tin Vừa Nhập</div>
+        <div class="table">
+            <table border="1" cellspacing=0 id="My_table">
+                <tr>
+                    <th>Tên</th>
+                    <th>Tuổi</th>
+                    <th>Giới Tính</th>
+                    <th>Năm Sinh</th>
+                </tr>
+                <tr>
+                    <td class="text">Lê Bá Long</td>
+                    <td class="text">22</td>
+                    <td class="text">Nam</td>
+                    <td class="text">2000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./Bai_tap_2.js"></script>
+</body>
+
+</html>

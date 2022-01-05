@@ -1,0 +1,336 @@
+$primary-color: rgb(15, 9, 9);
+$text-color: black;
+$background-header: white;
+html {
+  font-size: 62.5%; //1rem =10px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+@mixin flex($align: center, $justify: space-between, $wrap: wrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+#main {
+  max-width: 1440px;
+  height: auto;
+
+  & #container {
+    max-width: 1210px;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    & .header {
+      @include flex(center, space-around, wrap);
+      // align-items: stretch;
+      // justify-content: space-around;
+      height: 7rem;
+      padding-top: 1rem;
+      background: $background-header;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: aliceblue;
+      z-index: 100;
+      &__logo .text-logo {
+        text-decoration: none;
+        font-size: 2rem;
+        color: $text-color;
+        font-style: bold;
+        font-weight: 600;
+        letter-spacing: 1rem;
+      }
+      &__menu {
+        &-list {
+          padding: 0 2rem;
+          font-size: 2rem;
+          display: inline-block;
+          align-items: flex-start;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          &--item > a {
+            color: $text-color;
+          }
+        }
+      }
+      &__login i {
+        font-size: 2rem;
+        color: $text-color;
+        margin: 0 1rem;
+        word-spacing: 1rem;
+      }
+    }
+    & #slider {
+      margin-top: 7rem;
+      height: auto;
+      &.title,
+      h1 {
+        padding: 3rem 0;
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      &.title,
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0.2rem;
+      }
+      & div.shop-now {
+        width: 12rem;
+        height: 4rem;
+        margin: 0 auto;
+        & button {
+          margin-top: 2rem;
+          width: 12rem;
+          height: 4rem;
+          background: $primary-color;
+          color: white;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  & #product {
+    margin-top: 7rem;
+    max-width: 1440px;
+    height: auto;
+    background: rgb(231, 181, 200);
+    & div.wrapper {
+      max-width: 1210px;
+      height: auto;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      display: flex;
+      & .block_1 {
+        width: 25%;
+        height: 50rem;
+        padding-top: 3rem;
+        position: relative;
+        & .pro_img {
+          width: 27rem;
+          height: 30rem;
+          margin: 0 auto;
+          margin-bottom: 2rem;
+          background: rgb(238, 221, 221);
+          & img {
+            width: 27rem;
+            height: 30rem;
+            margin: 0 auto;
+          }
+        }
+        & div.text-product {
+          width: 20rem;
+          height: 5rem;
+          margin: 0 auto;
+          text-align: center;
+          color: $text-color;
+          text-transform: uppercase;
+          font-weight: 600;
+
+          & p {
+            margin-top: 0.5rem;
+          }
+        }
+        & .add-to-cart {
+          width: 25rem;
+          height: 3rem;
+          margin: 0 auto;
+          & button {
+            width: 25rem;
+            height: 3rem;
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+        }
+        .khoinho {
+          position: absolute;
+          width: 10rem;
+          height: 3rem;
+          z-index: 2;
+          top: 3rem;
+          left: 1rem;
+          color: white;
+          background-color: black;
+          line-height: 3rem;
+          text-align: center;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  #banner {
+    max-width: 1440px;
+    height: auto;
+    & .banner_block {
+      max-width: 1210px;
+      height: auto;
+      margin: 0 auto;
+
+      display: flex;
+      padding-top: 2rem;
+      & .banner_block_left {
+        width: 50%;
+        height: 40rem;
+        margin: 2rem;
+        background-image: url("https://i.bloganchoi.com/bloganchoi.com/wp-content/uploads/2020/09/anh-bia-dep-5-9-696x435.jpg?fit=700%2C20000&quality=95&ssl=1");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        & .text {
+          position: absolute;
+          z-index: 2;
+          font-size: 5rem;
+          top: 5rem;
+          left: 6rem;
+          text-transform: uppercase;
+        }
+        & .khoi_nho {
+          position: absolute;
+          z-index: 3;
+          width: 13rem;
+          height: 3rem;
+          line-height: 3rem;
+          font-size: 2rem;
+          top: 12rem;
+          left: 6rem;
+          background-color: black;
+          color: white;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+      & .banner_block_right {
+        width: 50%;
+        height: 40rem;
+        margin: 2rem;
+        background-image: url("https://i.bloganchoi.com/bloganchoi.com/wp-content/uploads/2020/09/anh-bia-dep-2-8-696x463.jpg?fit=700%2C20000&quality=95&ssl=1");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        & .text {
+          position: absolute;
+          z-index: 2;
+          font-size: 4.5rem;
+          bottom: 5rem;
+          left: 5rem;
+          text-transform: uppercase;
+        }
+        & .khoi_nho {
+          position: absolute;
+          z-index: 3;
+          width: 13rem;
+          height: 3rem;
+          line-height: 3rem;
+          font-size: 2rem;
+          bottom: 12rem;
+          left: 6rem;
+          background-color: black;
+          color: white;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  #box {
+    margin-top: 2rem;
+    max-width: 1440px;
+    height: 10rem;
+    display: flex;
+    background: rgb(231, 181, 200);
+    & .box_1 {
+      width: 25%;
+      height: 10rem;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & .icon {
+        font-size: 4rem;
+      }
+      & .text {
+        padding-left: 1rem;
+        margin-top: 2rem;
+        & .title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          padding-bottom: 1rem;
+        }
+        & .box_text {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .message {
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .img-pictrues {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    & .pictrues_1 > img {
+      padding: 0.5rem;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+  #footer {
+    max-width: 117rem;
+    margin: 0 auto;
+    & .footer_top > ul {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & a {
+        padding: 0 3rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: black;
+      }
+    }
+    & .footer_bottom {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & a {
+        padding: 0 3rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: rgb(53, 49, 49);
+      }
+    }
+  }
+}

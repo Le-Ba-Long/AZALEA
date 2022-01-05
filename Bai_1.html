@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        th,
+        td {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tong {
+            width: 400px;
+            display: flex;
+            margin-top: 20px;
+            margin: 0 auto;
+
+        }
+
+        .right {
+            margin-left: 20px;
+
+        }
+
+        .right .width_1 {
+            width: 200px;
+        }
+
+        .right .width_2 {
+            width: 20px;
+        }
+
+        .hien-thi {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            margin: 20px 20px;
+        }
+
+        .table {
+            width: 700px;
+            margin: 0 auto;
+
+        }
+
+        .text {
+            text-align: center;
+        }
+    </style>
+    <title>Bài Tập 1</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="tong">
+            <div class="left">
+                <label for="">Số Thứ Nhất :</label><br><br>
+                <label for="">Số Thứ Hai :</label><br><br>
+                <label>Phép Tính:</label><br><br><br><br><br>
+                <label for="">Kết Quả :</label>
+            </div>
+            <div class="right">
+                <input type="text" id="st1" class="width_1" /><br><br>
+                <input type="text" id="st2" class="width_1" /><br><br>
+                <input type="radio" name="pheptinh" value="+" class="width_2">+
+                <input type="radio" name="pheptinh" value="-" class="width_2">-
+                <input type="radio" name="pheptinh" value="*" class="width_2">*
+                <input type="radio" name="pheptinh" value="/" class="width_2">/
+                <input type="radio" name="pheptinh" value="^" class="width_2">^<br><br>
+                <button id="btn_tinh">Tính</button>
+                <button id="btn_xoa-tinh">Xóa Thông Tin</button><br><br>
+                <input id="kq" readonly>
+            </div>
+        </div>
+        <div class="hien-thi">Hiển Thị Thông Tin Vừa Nhập</div>
+        <div class="table">
+            <table border="1" cellspacing=0 id="My_table">
+                <tr>
+                    <th>Số Thứ Nhất</th>
+                    <th>Số Thứ Hai</th>
+                    <th>Phép Tính</th>
+                    <th>Kết Quả</th>
+                </tr>
+                <tr>
+                    <td id="kq_1" class="text">10</td>
+                    <td id="kq_2" class="text">20</td>
+                    <td id="phep-tinh" class="text">Cộng</td>
+                    <td id="kq_3" class="text">30</tdid>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./Bai_tap_1.js"></script>
+</body>
+
+</html>
